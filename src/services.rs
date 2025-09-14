@@ -60,7 +60,7 @@ pub async fn fetch_stars(data: web::Data<AppState>) -> impl Responder {
     drop(cache);
 
     let client = reqwest::Client::new();
-    let owner = env::var("GITHUB_OWNER").unwrap_or_else(|_| String::from("rx0a"));
+    let owner = env::var("GITHUB_OWNER").unwrap_or_else(|_| String::from("rxsp"));
     let repo = env::var("GITHUB_REPO").unwrap_or_else(|_| String::from("rayspace.dev"));
 
     let request_url = format!(
